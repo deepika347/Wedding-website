@@ -1,0 +1,263 @@
+<html>
+<head>
+<title>Wedding Shoot</title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+#navbar{
+display:flex;
+align-items:center;
+top:0px;
+}
+#navbar::before{
+background-color:black;
+position:abosute;
+top:0px;
+left:0px;
+height:100%;
+width:100%;
+z-index: -1;
+opacity:0.7;
+}
+#navbar ul{
+display:flex;
+font-family:"Bree Serif,serif";
+}
+#navbar ul li{
+list-style:none;
+font-size:1.3rem;
+}
+#navbar ul li a{
+color:black;
+display:block;
+padding:3px 22px;
+border-radius:20px;
+text-decoration:none;
+}
+#navbar ul li a:hover{
+color:black;
+background-color:brown;
+}
+#home{
+display:flex;
+flex-direction:coloumn;
+padding:3px 200px;
+height:550px;
+justify-content:center;
+align-items:center;
+margin-top:-100px;
+background:url("https://media.istockphoto.com/id/1173560626/photo/wedding-background-with-copy-space-for-creative-text.jpg?b=1&s=170667a&w=0&k=20&c=QQk3Fv14D2-KJ3dyd4PE_i_3BfMfVqvPzSnEhNhcAhg=");
+}
+#home:before{
+content:"";
+position:abosute;
+height:602px;
+top:0px;
+left:0px;
+width:100%;
+z-index:-1;
+opacity:0.89;
+}
+#home h1{
+color:black;
+text-align:center;
+font-family:"Bree Serif,serif";
+}
+#home p{
+color:white;
+text-align:center;
+font-size:1.5rem;
+font-family:"Bree Serif,serif";
+}
+#services{
+margin:34px;
+display:flex;
+}
+#services .box{
+border:2px solid brown;
+padding:34px;
+margin:2px 55px;
+border-radius:28px;
+background:#f2f2f2;
+margin-bottom:20px;
+}
+#services .box img{
+height:160px;
+margin:auto;
+display:block;
+}
+#services .box p{
+font-family:"Bree Serif,serif;
+}
+#client-section{
+position:relative;
+}
+#client-section::before{
+position:absolute;
+width:100%;
+height:100%;
+z-index:-1;
+opacity:0.3;
+}
+#clients{
+display:flex;
+justify-content:center;
+align-itemd:center;
+border-radius:10px;
+}
+.client-item{
+ padding:34px;
+}
+#clients img{
+height:124px;
+}
+#contact{
+position:relative;
+}
+#contact::before{
+position:aboslute;
+width:100%;
+height:100%;
+z-index:-1;
+opacity:0.7;
+}
+#contact-box{
+display:flex;
+justify-content:center;
+align-items:center;
+padding-bottom:34px;
+}
+#contact-box input,
+#contact-box textarea{
+width:100%;
+padding:0.5rem;
+border-radius:9px;
+font-size:1.1rem;
+}
+#contact-box form{
+width:40%;
+}
+#contact-box label{
+font-size:1.3rem;
+font-family:"Bree Serif, serif";
+}
+footer{
+background:black;
+color:white;
+padding:9px 20px;
+}
+.h-primary{
+font-family:"Bree Serif,serif";
+font-size:3.8rem;
+padding:12px;
+margin-top:3%;
+background: url("data:image/jpeg;base64,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U+ydBOux2Ao4uiEcXQ6rbQqRppbYjUWkzRQcKo4rE0FqJjgVY+w6XItoUaomVr99h/5s6NfF0VCnCUnUbdRUy/BKgH1mfAOjq4Qt1dWoVbdGykX94WAIMupqQUGK48hR0q0MRRzKyljSLAXBF8yXHOch0a/o9QgYzCtSbR6dRmQOO/K6aNPp01VcOje0it5gH6xg5fDUcmJdqOMprh3F1VKtMim4A0FNrrlJB2115SxrcRCWNRsNVA2YOlNx5K5I/wAQkx+B4Y74aif+Wn8ITgWGG2Go/wB2n8IwQV6X4TW9WxG62LH0KXB9DILdJamJuuFo6G462qy0x3XAuT8vSdRRw6J7KKv5QB9JjVwqN7VNW81B+ojlHO4HgFNAGxNZHy2tTBCUVttoTd7cs2g5ASzxXSCgilg2cDc0xmUctX9hfUiTEwFIaijTHkij9JsxOHWojU3F1YEEd4MYKTA4gY696qdWpGajTbMW7utb3fwrobak7S/AnN8D6KDCYjradUlGRlZGtcXII1G+3dOliBERKEREBERAREQEREBERAREQEREBERAREQEREBERAxdgASTYAXJOwHMzk8fh6eIqGvVUZESyByQAgJJdvd1OvPZRrfLdcUY1GFEbCzVLc9eynqdfhfQma+I8CTEUxTdmy3u2U2BI2G2oHL46mSq4enxjAUX/Z4M1bHV2Ngfyq19O4fXed5w/iL4hA1OmaQ76qsG9FFgR45vSauG9F8LQbMlIFhszEuR5X0HpLmSSiGeHhv3ju/gTlXyypYEed5IoUFQWRVUdygD6TZE0iBxajWdQtF1S57ZYXJXmBoeV/lrJyLYADkLT2IHjKDoRfz1kXDjLVqKNsqNbuJzqfki/OaOkGGqVaDJTdkJK3KWLZb62uR9dryRgKbWLP7bWuNNFAsoNtL7k20uxtAlREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBMXYAEnYC58plI+OF0y+8QvoTr8rwI+CpEi50LHM/mRovothfuk8CFFp7AREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERATwi89iAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgf//Z");
+}
+.h-secondary{
+font-family:"Bree Serif, serif";
+font-size:2.3rem;
+padding:12px;
+}
+.btn{
+padding:6px 20px;
+border:2px solid white;
+background-color:brown;
+color:white;
+margin:17px;
+font-size:1.5rem;
+border-radius:10px;
+cursor:pointer;
+}
+.center{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<nav id="navbar">
+<ul>
+<li class="item"><a href="#home"><b>Home</b></a></li>
+<li class="item"><a href="#services-container"><b>Services</b></a></li>
+<li class="item"><a href="#client-section"><b>Our Clients</b></a></li>
+<li class="item"><a href="#contanct"><b>Contact Us</b></a></li>
+</ul>
+</nav>
+<center><h1 class="h-primary">Welcome to Page</h1></center>
+<section id="home">
+<p>The Keys to a Successful Marriage 
+Search Encyclopedia
+Search Encyclopedia
+The Keys to a Successful Marriage 
+When you're caught up in the excitement of your wedding,
+it can be hard to imagine that you and your spouse might not live happily ever after.
+But sharing your life with another person can be a challenge, especially if you don’t have a lot of experience with relationships.
+Marriages take work, commitment, and love, but they also need respect to be truly happy and successful.<br>
+<button class="btn">Booked Now</button>
+</p>
+</section>
+<h1 class="h-primary center">Our facilites</h1>
+<section id="services-Container">
+<div id="services">
+<div class="box">
+<img src="https://www.lovevivah.com/matrimony/blog/wp-content/uploads/2014/07/indian-wedding-couple-1.jpg" alt="not found">
+<h2 class="h-secondary center">Married life</h2>
+<p class="center">Talking with your spouse is one of the best ways to keep your marriage healthy and successful. 
+Be honest about what you're feeling, but be kind and respectful when you communicate. 
+Part of good communication is being a good listener and taking the time to understand what it is your spouse wants and needs from you. 
+Keep the lines of communication open by talking often, and not just about things like bills and the kids. Share your thoughts and feelings.
+</div>
+<div class="box">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCYz3Jqr57bfdj86YOorsFumsdjDZ68M72MQ&usqp=CAU" alt="">
+<h2 class="h-secondary center">Odering</h2>
+<p class="center">Alone time is just as important as couple time. 
+Everyone needs time to recharge, think, and enjoy personal interests. 
+That time is often lost when you're married, especially if you have kids. 
+Go out with friends, take a class, or do volunteer work, whatever you find enriching. 
+When you're back together with your spouse, you'll appreciate each other even more.
+</p>
+</div>
+</section>
+<section id="client-section">
+<h1 class="h-primary center">Our Shoot</h1>
+<div id="clients">
+<video width="1000px" height="500px" controls="controls"/>
+<source src="https://www.flexclip.com/res/preview/720p/minimalist-wedding-announcement.mp4" type="video/mp4">
+</video>
+</div>
+</section>
+<section id="contact">
+<h1 class="h-primary center">Contact Us</h1>
+<div id="contact-box">
+<form action="">
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" name="name" id="name" placeholder="Enter your name">
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="text" name="name" id="email" placeholder="Enter your name">
+</div>
+<div class="form-group">
+<label for="phone">Phone:</label>
+<input type="text" name="name" id="phone" placeholder="Enter your phone">
+</div>
+<div class="form-group">
+<label for="message">Massage:</label>
+<textarea name="message" id="message" cols="30" rows="10"></textarea>
+</div>
+</form>
+</div>
+</section>
+<footer>
+<div class="center">
+   <a href ="profile.html">Check All</a>
+<br>
+   copyright &copy;www.mywedding.com  All Right Are Reserved
+</div>
+</footer>
+<br>
+<br>
+</body>
+</html>
